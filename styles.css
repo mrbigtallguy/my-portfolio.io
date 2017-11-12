@@ -1,0 +1,66 @@
+body {
+  background-color:  #0E0E0E;
+}
+/* makes the header stick to the top of the page*/
+body {
+margin: 0;
+padding: 0;
+}
+header {
+position: fixed;
+top: 0px;
+ }
+
+ .logo {
+   display: block;
+   margin: 1% auto 0;
+   width: 149px;
+   height: 145px;
+ }
+
+.hero-img {
+  display: block;
+  margin: 5% auto 0;
+  width: 400px;
+  height: 306px;
+}
+
+h1 {
+  margin: 5% 0 0;
+  font-family: 'Raleway', sans-serif;
+  color: #ffffff;
+}
+
+h2 {
+  margin: 5% 0 0;
+  font-family: 'Raleway', sans-serif;
+  color: #ffffff;
+}
+
+.tag-line-sub {
+  text-align: center;
+}
+
+.tag-line {
+  text-align: center;
+}
+/* the width is what determines how far apart the items in contact are */
+.contact {
+  margin: 2% auto 0;
+  width: 50%;
+  font-family: 'Raleway', sans-serif;
+  color: #ffffff;
+}
+
+.contact-item {
+  display: inline-block;
+}
+
+.left {
+  float: left;
+
+}
+
+.right {
+  float: right;
+}
