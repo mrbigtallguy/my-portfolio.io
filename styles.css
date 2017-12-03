@@ -1,0 +1,470 @@
+/* Parallax base styles
+  --------------------------------------------- */
+
+  .parallax {
+    height: 500px; /* fallback for older browsers */
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+    -webkit-perspective: 300px;
+    perspective: 300px;
+  }
+
+  .parallax__group {
+    position: relative;
+    height: 500px; /* fallback for older browsers */
+    height: 100vh;
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+  }
+
+  .parallax__layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+
+  .gap {
+    margin-top: 1500px;
+  }
+
+
+/* these are the different layer types - pushing them further back (translateZ which is basically scroll speed) while maintaining relative scale
+ le equation [1 + (translateZ * -1) / perspective] in this case our perspective is 300px */
+  .parallax__layer--fore {
+    -webkit-transform: translateZ(90px) scale(.7);
+    transform: translateZ(90px) scale(.7);
+    z-index: 1;
+  }
+  .parallax__layer--base {
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    z-index: 4;
+  }
+
+  /* this is slightly further away and therefore slower the regular base  */
+  .parallax__layer--base2 {
+    -webkit-transform: translateZ(-150px) scale(1.5);
+    transform: translateZ(-150px) scale(1.5);
+    z-index: 4;
+  }
+
+  .parallax__layer--back {
+    -webkit-transform: translateZ(-375px) scale(2.25);
+    transform: translateZ(-300px) scale(2);
+    z-index: 3;
+  }
+
+  .parallax__layer--back2 {
+    -webkit-transform: translateZ(-450px) scale(2.5);
+    transform: translateZ(-450px) scale(2.5);
+    z-index: 3;
+  }
+
+  .parallax__layer--back3 {
+    -webkit-transform: translateZ(-525px) scale(2.75);
+    transform: translateZ(-525px) scale(2.75);
+    z-index: 3;
+  
+  }
+/* logo */
+  .parallax__layer--deep {
+    -webkit-transform: translateZ(-600px) scale(3);
+    transform: translateZ(-600px) scale(3);
+    z-index: 2;
+  }
+
+/* lil clouds */  
+  .parallax__layer--deep2 {
+    -webkit-transform: translateZ(-675px) scale(3.25);
+    transform: translateZ(-675px) scale(3.25);
+    z-index: 2;
+  }
+
+/* cloud 1 */  
+  .parallax__layer--deep3 {
+    -webkit-transform: translateZ(-750px) scale(3.5);
+    transform: translateZ(-750px) scale(3.5);
+    z-index: 2;
+  }
+
+/* cloud 2 */
+  .parallax__layer--deep4 {
+    -webkit-transform: translateZ(-825px) scale(3.75);
+    transform: translateZ(-825px) scale(3.75);
+    z-index: 2;
+  }
+
+/* sky and stars */
+  .parallax__layer--deep5 {
+    -webkit-transform: translateZ(-900px) scale(4);
+    transform: translateZ(-900px) scale(4);
+    z-index: 2;
+  }
+
+
+
+  /* Debugger styles - used to show the effect
+  --------------------------------------------- */
+  .nav-item:hover {
+    animation: shadow 1s ease-out alternate infinite; 
+
+  }
+
+  @keyframes shadow {
+    0% {
+      text-shadow: 2px 2px 4px rgba(0,0,0,.1);
+    }
+    100% {
+      text-shadow: 2px 2px 4px rgba(0,0,0,.5);
+    }
+  }
+  .nav {
+    position: fixed;
+    width: auto;
+    top: 0;
+    right: 9em;
+    z-index: 999;
+    /*background: rgba(0,0,0,.85); */
+    color: #fff;
+    padding: .5em;
+    border-radius: 0 0 5px 5px;
+  }
+  .nav-item {
+    display: inline-block;
+    padding: 0; 
+    margin: 1em;
+    color: inherit;
+    text-decoration: none;
+  }
+
+  .debug {
+    position: fixed;
+    top: 0;
+    left: .5em;
+    z-index: 999;
+    background: rgba(0,0,0,.85);
+    color: #fff;
+    padding: .5em;
+    border-radius: 0 0 5px 5px;
+  }
+  .debug-on .parallax__group {
+    -webkit-transform: translate3d(800px, 0, -800px) rotateY(30deg);
+    transform: translate3d(700px, 0, -800px) rotateY(30deg);
+ }
+  .debug-on .parallax__layer {
+    box-shadow: 0 0 0 2px #000;
+    opacity: 0.9;
+  }
+  .parallax__group {
+    -webkit-transition: -webkit-transform 0.5s;
+    transition: transform 0.5s;
+  }
+
+
+  /* demo styles
+  --------------------------------------------- */
+
+  body, html {
+    overflow: hidden;
+    font-family: 'Raleway', sans-serif;
+  }
+
+  body {
+    font: 100% / 1.5 'Raleway', sans-serif;;
+    color: #fff;
+    background-color: #4e7474;
+  }
+
+  * {
+    margin:0;
+    padding:0;
+  }
+
+  .parallax {
+    font-size: 100%;
+  }
+
+   /* moves the content within the parallax layers */
+  .box {
+    text-align: center;
+    position: absolute;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+  }
+
+  /* additions to box class */
+
+  .b-left {
+    left: 80%;
+  }
+
+  .b-bottom { 
+    top: 85%;
+  }
+
+  /* embedded in box class */
+
+
+
+  /* text styles 
+  font-family: 'Vollkorn SC', serif;
+font-family: 'Raleway', sans-serif;
+  */
+
+  .hero-text { 
+    text-align: center;
+    width: 50vw;
+    font-family: 'Vollkorn SC', serif; 
+  }
+
+  .h-center {
+    margin: 25vw auto;
+  }
+
+  .h-top { 
+    margin: 10vw auto;
+  }
+  
+  .para {
+    text-align: left;
+    left: 26vw;
+    top: 15vw;
+    width: 30vw; 
+  }
+
+  ul {
+    list-style-type: none;
+    text-align: left;
+    line-height: 2;
+  }
+
+  p {
+    line-height: 1.5;
+  }
+
+  #bio {
+    font-family: 'Vollkorn SC', serif;
+  }
+
+
+  /* grid styles */ 
+  .wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: 1px;
+    grid-row-gap: 1px;
+    background-color: white;
+    width: 80vw;
+    margin: 0vw auto;
+  }
+
+  .w-project { 
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 0px;
+    background-color: #4e7474;
+  }
+  
+  .cell {
+    background-color: #4e7474;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    font-size: auto;
+    color: white;
+    line-height: 1;
+    font-weight: 200;
+    cursor: pointer;
+    transition: all .3s ease;
+  }
+
+  .cell-icon {
+    width: 100%;
+    max-width: 350px;
+    margin: 5vh;
+
+  }
+
+  .cell-title { 
+    position: relative;
+    
+  }
+
+  .t-1 {
+    top: 0px;
+  }
+
+  .t-2 {
+    top: 0px;
+  }
+
+  .t-3 {
+    top: 2vh;
+  }
+
+  .t-4 {
+    top: 3vh;
+  }
+
+  .t-5 {
+    top: 0vh;
+  }
+
+  .t-6 {
+    top: -3vh;
+  }
+
+  a {
+    list-style-type: none;
+    text-decoration: none;
+    color: #fff;
+  }
+
+  /* style the groups and containers
+  --------------------------------------------- */
+
+  /* group1 (foreground)
+  --------------------------------------------- */
+
+  #group1 {
+    z-index: 5; /* slide over group 2 */
+  }
+
+  /* foreground of hero image - (tree and swing) */
+  #group1 .parallax__layer--base {
+    background: url(hero1.png);
+    min-width: 1440px;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: left bottom;
+  }
+
+  /* still foreground but just the right patch of grass */ 
+
+  #group1 .parallax__layer--base2 {
+    background: url(hero2.png);
+    min-width: 1440px;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: right bottom;
+  }
+
+  /* midground of hero image -  (water and floating island) */
+
+  #group1 .parallax__layer--back {
+    background: url(hero3.png);
+    min-width: 1440px;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: left bottom;
+  }
+/* midground of hero image -  (rest of the trees) */
+  #group1 .parallax__layer--back2 {
+    background: url(hero4.png);
+    min-width: 1440px;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: left bottom;
+  }
+/* midground of hero image -  (rest of the trees) */
+  #group1 .parallax__layer--back3 {
+    background: url(hero5.png);
+    min-width: 1440px;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: left bottom;
+  }
+
+/* background - logo */ 
+  #group1 .parallax__layer--deep {
+    background: url(hero6.png);
+    min-width: 1440px;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: left bottom;
+  }
+/* background - lil clouds */ 
+#group1 .parallax__layer--deep2 {
+  background: url(hero7.png);
+  min-width: 1440px;
+  background-size: 100%;
+  background-repeat: repeat;
+  background-position: left bottom;
+}
+/* background - cloud1 */ 
+#group1 .parallax__layer--deep3 {
+  background: url(hero8.png);
+  min-width: 1440px;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: left bottom;
+}
+/* background - cloud2 */ 
+#group1 .parallax__layer--deep4 {
+  background: url(hero9.png);
+  min-width: 1440px;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: left bottom;
+}
+/* background - sky and stars */ 
+#group1 .parallax__layer--deep5 {
+  background: url(herosky.png);
+  min-width: 1440px;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: left bottom;
+}
+/* The 'about me' section */
+
+  #group2 {
+    z-index: 7; /* slide over groups 1 and group 3 */
+  }
+  #group2 .parallax__layer--fore { 
+    background: #4e7474;
+  }
+  #group2 .parallax__layer--base { 
+    background: #4e7474;
+  }
+
+/* The things i do section */
+
+#group3 { 
+    z-index: 7; /* slide over group 1 and group 4 */
+}
+
+#group3 .parallax__layer--base { 
+  background: #4e7474;
+}
+
+/* portfolio / some things ive worked on section */
+
+#group4 { 
+  z-index: 6; /* slide under group 3 */
+}
+
+#group4 .parallax__layer--base { 
+background: #4e7474;
+}
+
+#group5 { 
+  z-index: 5; /* slide under group 4 */
+}
+
+#group5 .parallax__layer--base { 
+background: #4e7474;
+}
+
+  /* for da phone*/ 
+
+  @media screen and (max-width: 850px) { 
+    .wrapper {
+      grid-template-columns: 1fr;
+  }
+
+

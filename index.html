@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<!-- saved from url=(0066)http://keithclark.co.uk/articles/pure-css-parallax-websites/demo3/ -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="viewport" content="width=device-width">
+<title>Sam Hall</title>
+
+<link rel="stylesheet" href="styles.css" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Raleway|Vollkorn+SC" rel="stylesheet">
+<link rel="icon" type="image/ico" href="favicon.ico">
+
+</head>
+
+<body>
+  <nav class="nav"> 
+    <a  class="nav-item" href="#group2">
+      <h3>About me</h3>
+    </a>
+    <a class="nav-item" href="#group4">
+      <h3>Portfolio</h3>
+    </a>
+  </nav>
+  <!--<div class="demo__info">
+    Pure CSS parallax scroll demo #3 by Keith Clark. Please read the <a href="http://keithclark.co.uk/articles/pure-css-parallax-websites/">blog post</a> for more information.
+  </div> -->
+
+  <div class="parallax">
+    <!-- this section is the her image broken up into "x" amount of layers -->
+    <div id="group1" class="parallax__group">
+      <!-- slogan - "Sam Hall and something from portfolio" -->
+      <div class="parallax__layer parallax__layer--fore">
+        <div class="box b-left b-bottom">
+          <h1>Sam Hall Design</h1>
+          <h3>Discover, Create, Empower</h3>
+        </div>
+      </div>
+      <!-- the foreground (tree and swing) -->
+      <div class="parallax__layer parallax__layer--base"></div>
+      <!-- the foreground (right ptach of grass) -->
+      <div class="parallax__layer parallax__layer--base2"></div>
+      <!-- the water and floating island --> 
+      <div class="parallax__layer parallax__layer--back"></div>
+      <!-- the trees in the distance -->
+      <div class="parallax__layer parallax__layer--back2"></div>
+      <!-- more trees in the distance -->
+      <div class="parallax__layer parallax__layer--back3"></div>
+      <!-- the logo -->
+      <div class="parallax__layer parallax__layer--deep"></div>
+      <!-- the little clouds -->
+      <div class="parallax__layer parallax__layer--deep2"></div>
+      <!-- the cloud1 -->
+      <div class="parallax__layer parallax__layer--deep3"></div>
+      <!-- the cloud2 -->
+      <div class="parallax__layer parallax__layer--deep4"></div>
+      <!-- the sky and stars -->
+      <div class="parallax__layer parallax__layer--deep5"></div>
+    </div>
+    <!-- this is what happens after the main image -->
+    <div id="group2" class="parallax__group">
+
+      <div id="bio" class="parallax__layer parallax__layer--fore hero-text h-center">
+          <h1>Hi there! I’m Sam Hall, a digital designer from Newtown, Sydney.
+            I love to solve problems and create meaningful, enjoyable experiences through good design.</h1>
+        </div>
+      
+      <div class="parallax__layer parallax__layer--base">
+      </div>
+    </div>
+<!-- my skills section --> 
+    <div id="group3" class="parallax__group">
+      <div class="parallax__layer parallax__layer--fore hero-text h-top">
+        
+      </div>
+      <div class="parallax__layer parallax__layer--base">
+        <h1 class="hero-text h-top">I specialise in...</h1>
+        <div class="wrapper"> 
+          <div class="cell">
+            <h1 class="cell-title t-1">Design Methods and Processes</h1>
+            <img class="cell-icon" src="skill1.png" alt="Design Methods and Processes"></img>
+            <p>When solving a problem, I followed a set of principles that allows me
+                to discover key values and needs of who I am designing for,
+                the criteria for the solution and how to go about 
+                efficient and effective implementation.
+            </p>
+          </div>
+          <div class="cell"> 
+            <h1 class="cell-title t-2">Telling a Story</h1>
+            <img class="cell-icon" src="skill2.png" alt="Design Methods and Processes"></img>
+            <br>
+            <br>
+            <p>A captivating story is the best way to send a message. 
+              Through a mix of the written and spoken word, image and animation the 
+              very best solution to a problem shines with it’s fullest potential.
+            </p> 
+          </div>
+          <div class="cell"> 
+            <h1 class="cell-title t-3">Ideation</h1>
+            <img class="cell-icon" src="skill3.png" alt="Design Methods and Processes"></img>
+            <br>
+            <br>
+            <br>
+            <p>Racking your brain for ideas can be a tedious task. 
+              When I need to think of a solution, the wackiest ideas mingle with the sensible. 
+              This thought cocktail then finds itself becoming both innovative and grounded by 
+              taking the best parts of a lot of avenues.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="group4" class="parallax__group">
+        <div class="parallax__layer parallax__layer--base">
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <h1 class="hero-text h-top">Some things I've worked on...</h1>
+          <div class="wrapper"> 
+            <div class="cell">
+              <a href="#group5">
+              <h1 class="cell-title t-4">Woolworths Service Desk UI</h1>
+              </a>
+              <img class="cell-icon" src="1.jpg" alt="Design Methods and Processes"></img>
+              <p>A self-service interface that aims to improve customer satisfaction through a more automated and fluid user experience.
+              </p>
+            </div>
+            <div class="cell">
+              <a href="#group6">
+              <h1 class="cell-title t-5">Nurse Connect</h1>
+              </a>
+              <img class="cell-icon" src="2.jpg" alt="Design Methods and Processes"></img>
+              <p>Nurse Connect aims to increase Nurse resilience through improving the facilitation of communication between their 
+                  coordinator and other nurses around the globe. 
+              </p> 
+            </div>
+            <div class="cell">
+              <a href="#group7" 
+              <h1 class="cell-title t-6">Go Hub</h1>
+              </a>
+              <img class="cell-icon" src="3.jpg" alt="Design Methods and Processes"></img>
+              <p>An automated car service that links with public transport to get the customer to their destination quickly in suburban areas.
+              </p>
+            </div>
+          </div>
+        </div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div id="group5" class="parallax__group">
+        <div class="parallax__layer parallax__layer--base">
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <h1 class="hero-text h-top">Woolworths Service Desk UI</h1>
+          <div class="wrapper w-project">
+            <div class="cell">
+              <h1 class="cell-title t-4">The Problem</h1>
+              <img class="cell-icon" src="w1.jpeg" alt="Design Methods and Processes"></img>
+              <p>Communication issues combined with a frustrating and unintuitive customer experience 
+                when using the service desk at Woolworths.
+              </p>
+            </div>
+            <div class="cell"></div>
+            <div class="cell"></div>
+            <div class="cell"> 
+              <h1 class="cell-title t-5">The Method</h1>
+              <img class="cell-icon" src="w2.jpg" alt="Design Methods and Processes"></img>
+              <p> Through a combination of user research methods, the team and I discovered three key areas 
+                needing improvement; clarity of purpose, as well as reliability and functionality of process.
+              </p> 
+            </div>
+            <div class="cell"> 
+              <h1 class="cell-title t-6">The Solution</h1>
+              <img class="cell-icon" src="w3.jpg" alt="Design Methods and Processes"></img>
+              <p>A self-service UI at the Woolworths service desk that processed simple aspects of a request to and
+                allowed staff to focus on more complex, emotional aspects of the customer experience.
+              </p>
+            </div>
+            <div class="cell"></div>
+            <div class="cell"></div>
+            <div class="cell"> 
+                <h1 class="cell-title t-6">The Team</h1>
+                <ul>
+                  <li>Me - Lead, User Research</li>
+                  <li>Will Jarman - UI, Visual Communication</li>
+                  <li>Mikelis Knochs – UI, Visual Communication</li>
+                  <li>Lucas Rusiecki – 3D Modelling</li>
+                  <li>Declan Behan – UI, User Research</li>
+                </ul>
+              </div>
+          </div>
+        </div>
+    </div>
+    <div id="group6" class="parallax__group gap">
+        <div class="parallax__layer parallax__layer--base">
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <h1 class="hero-text h-top">Nurse Connect</h1>
+          <div class="wrapper w-project"> 
+            <div class="cell">
+              <h1 class="cell-title t-4">The Problem</h1>
+              <img class="cell-icon" src="n1.jpeg" alt="Design Methods and Processes"></img>
+              <p>VAD (Ventricular Assist Device) nurses experience an immense amount of emotional fatigue 
+                due to the demands of their job. Over time, this affects their overall health and their 
+                effectiveness at providing optimal paitient care.
+              </p>
+            </div>
+            <div class="cell"></div>
+            <div class="cell"></div>
+            <div class="cell"> 
+              <h1 class="cell-title t-5">The Method</h1>
+              <img class="cell-icon" src="n2.jpg" alt="Design Methods and Processes"></img>
+              <p>The team and I were given access to detailed research which, upon analysis, provided key insights into the deeper issues concerning VAD nurse emotional faitgue.
+              </p> 
+            </div>
+            <div class="cell"> 
+              <h1 class="cell-title t-6">The Solution</h1>
+              <img class="cell-icon" src="n3.jpg" alt="Design Methods and Processes"></img>
+              <p>A digital interface that facilatates communication between VAD nurses and coordinators 
+                as well as the greater VAD community
+              </p>
+            </div>
+            <div class="cell"></div>
+            <div class="cell"></div>
+            <div class="cell"> 
+                <h1 class="cell-title t-6">The Team</h1>
+                <ul>
+                    <li>Me - Research, Video Production</li>
+                    <li>Will Jarman - UI, UX</li>
+                    <li>Mikelis Knochs – UI, Video Production</li>
+                  </ul>
+              </div>
+          </div>
+        </div>
+    </div>
+    <div id="group7" class="parallax__group gap">
+        <div class="parallax__layer parallax__layer--base">
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <h1 id="gohub" class="hero-text h-top">Go-Hub</h1>
+          <div class="wrapper w-project"> 
+            <div class="cell">
+              <h1 class="cell-title t-4">The Problem</h1>
+              <img class="cell-icon" src="g1.jpg" alt="Design Methods and Processes"></img>
+              <p>Traffic Congestion during the work commute is frustrating and poorly affects someones day. 
+              </p>
+            </div>
+            <div class="cell"></div>
+            <div class="cell"></div>
+            <div class="cell"> 
+              <h1 class="cell-title t-5">The Method</h1>
+              <img class="cell-icon" src="g2.png" alt="Design Methods and Processes"></img>
+              <p>A combination of Report Research, Surveys and Contextual Interviews revealed the need
+                for a digital mobile solution that provides optimal travel routes while automating the planning of these routes
+              </p> 
+            </div>
+            <div class="cell"> 
+              <h1 class="cell-title t-6">The Solution</h1>
+              <img class="cell-icon" src="g3.jpg" alt="Design Methods and Processes"></img>
+              <p>A transport planning application that integrates with an autonomous vehicle network 
+                to improve connections between public transport hubs and the users home.</p>
+            </div>
+            <div class="cell"></div>
+            <div class="cell"></div>
+            <div class="cell"> 
+                <h1 class="cell-title t-6">The Team</h1>
+                <ul>
+                    <li>Me - UX, Animation</li>
+                    <li>Mikelis Knochs – UI, UX, Video Production</li>
+                  </ul>
+              </div>
+          </div>
+        </div>
+    </div>
+  </div>
+<!-- This website was based off "Pure CSS parallax scroll demo #3" by Keith Clark. Please read this blog post for more info http://keithclark.co.uk/articles/pure-css-parallax-websites/ -->
+</body></html>
