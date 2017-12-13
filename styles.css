@@ -219,8 +219,8 @@
 
   /* specific changes to boxes */
 
-  #bio {
-    margin-top: 65vh;
+  .bio {
+    margin-top: 60vh;
   }
 
   #bio-contact {
