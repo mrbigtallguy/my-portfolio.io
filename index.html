@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<!-- saved from url=(0066)http://keithclark.co.uk/articles/pure-css-parallax-websites/demo3/ -->
 <html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
 <meta name="viewport" content="width=device-width">
@@ -11,6 +12,9 @@
 </head>
 
 <body>
+  <!--<div class="demo__info">
+    Pure CSS parallax scroll demo #3 by Keith Clark. Please read the <a href="http://keithclark.co.uk/articles/pure-css-parallax-websites/">blog post</a> for more information.
+  </div> -->
 
   <div class="parallax">
     <!-- this section is the her image broken up into "x" amount of layers -->
@@ -48,7 +52,10 @@
           <img src="logo85x85.png" height="85">
         </a>
         </a>
-        <a class="nav-item ni-right" href="#group4">
+        <a class="nav-item ni-right" href="#group7">
+            <h3>Contact</h3>
+        </a>
+        <a class="nav-item ni-right" href="#group5">
             <h3>Portfolio</h3>
         </a> 
         <a  class="nav-item ni-right" href="#group2">
@@ -57,48 +64,52 @@
       </nav>
     <!-- this is what happens after the main image -->
     <div id="group2" class="parallax__group">
-      <div id="bio" class="parallax__layer parallax__layer--fore hero-text h-center">
-          <h1>Hi there! I’m Sam Hall, a digital designer from Newtown, Sydney.
+      <div class="parallax__layer parallax__layer--fore">
+          <h1 id="bio" class="hero-text h-center">Hi there! I’m Sam Hall, a digital designer from Newtown, Sydney.
             I love to solve problems and create meaningful, enjoyable experiences through good design.</h1>
         </div>
       
       <div class="parallax__layer parallax__layer--base">
+          <div id="me-img" class="section-hero"></div>
       </div>
     </div>
 <!-- my skills section --> 
-    <div id="group3" class="parallax__group">
-      <div class="parallax__layer parallax__layer--fore hero-text h-top">
+  <div id="group3" class="parallax__group">
+      <div class="parallax__layer parallax__layer--fore">
+          <h1 id="bio" class="hero-text h-center">I specialise in...</h1>
+        </div>
+      
+      <div class="parallax__layer parallax__layer--base">
+          <div id="skills-img" class="section-hero"></div>
+      </div>
+  </div>
+    <div id="group4" class="parallax__group">
+      <div class="parallax__layer parallax__layer--fore">
         
       </div>
       <div class="parallax__layer parallax__layer--base">
-        <h1 class="hero-text h-top">I specialise in...</h1>
         <div class="wrapper"> 
           <div class="cell">
-            <h1 class="cell-title t-1">Design Methods and Processes</h1>
-            <img class="cell-icon" src="skill1.png" alt="Design Methods and Processes"></img>
-            <p>When solving a problem, I followed a set of principles that allows me
+            <h1 class="cell-title">Design Methods and Processes</h1>
+            <img class="cell-icon" src="skill1.png" alt="A pathway"></img>
+            <p class="cell-desc">When solving a problem, I followed a set of principles that allows me
                 to discover key values and needs of who I am designing for,
                 the criteria for the solution and how to go about 
                 efficient and effective implementation.
             </p>
           </div>
           <div class="cell"> 
-            <h1 class="cell-title t-2">Telling a Story</h1>
-            <img class="cell-icon" src="skill2.png" alt="Design Methods and Processes"></img>
-            <br>
-            <br>
-            <p>A captivating story is the best way to send a message. 
+            <h1 class="cell-title">Telling a Story</h1>
+            <img class="cell-icon" src="skill2.png" alt="A wizard with fire in their hand"></img>
+            <p class="cell-desc">A captivating story is the best way to send a message. 
               Through a mix of the written and spoken word, image and animation the 
               very best solution to a problem shines with it’s fullest potential.
             </p> 
           </div>
           <div class="cell"> 
-            <h1 class="cell-title t-3">Ideation</h1>
-            <img class="cell-icon" src="skill3.png" alt="Design Methods and Processes"></img>
-            <br>
-            <br>
-            <br>
-            <p>Racking your brain for ideas can be a tedious task. 
+            <h1 class="cell-title">Ideation</h1>
+            <img class="cell-icon" src="skill3.png" alt="A lightbulb"></img>
+            <p class="cell-desc">Racking your brain for ideas can be a tedious task. 
               When I need to think of a solution, the wackiest ideas mingle with the sensible. 
               This thought cocktail then finds itself becoming both innovative and grounded by 
               taking the best parts of a lot of avenues.
@@ -107,190 +118,73 @@
         </div>
       </div>
     </div>
-    <div id="group4" class="parallax__group">
+    <div id="group5" class="parallax__group">
+        <div class="parallax__layer parallax__layer--fore">
+            <h1 id="bio" class="hero-text h-center">Some of the things I've worked on...</h1>
+          </div>
+        
         <div class="parallax__layer parallax__layer--base">
-          <br>
-          <br>
-          <br>
-          <br>
-          <br>
-          <br>
-          <br>
-          <h1 class="hero-text h-top">Some things I've worked on...</h1>
+            <div id="work-img" class="section-hero"></div>
+        </div>
+    </div> 
+    <div id="group6" class="parallax__group">
+        <div class="parallax__layer parallax__layer--base">
           <div class="wrapper"> 
             <div class="cell">
               <a href="#group5">
-              <h1 class="cell-title t-4">Woolworths Service Desk UI</h1>
+              <h1 class="cell-title">Woolworths Service Desk UI</h1>
               </a>
-              <img class="cell-icon" src="1.jpg" alt="Design Methods and Processes"></img>
-              <p>A self-service interface that aims to improve customer satisfaction through a more automated and fluid user experience.
+              <div id="wool-img" class="cell-img"></div>
+              <p class="cell-desc">A self-service interface that aims to improve customer satisfaction through a more automated and fluid user experience.
               </p>
             </div>
             <div class="cell">
               <a href="#group6">
-              <h1 class="cell-title t-5">Nurse Connect</h1>
+              <h1 class="cell-title">Nurse Connect</h1>
               </a>
-              <img class="cell-icon" src="2.jpg" alt="Design Methods and Processes"></img>
-              <p>Nurse Connect aims to increase Nurse resilience through improving the facilitation of communication between their 
+              <div id="nurse-img" class="cell-img"></div>
+              <p class="cell-desc">Nurse Connect aims to increase Nurse resilience through improving the facilitation of communication between their 
                   coordinator and other nurses around the globe. 
               </p> 
             </div>
             <div class="cell">
               <a href="#group7">
-              <h1 class="cell-title t-6">Go Hub</h1>
+              <h1 class="cell-title">Go Hub</h1>
               </a>
-              <img class="cell-icon" src="3.jpg" alt="Design Methods and Processes"></img>
-              <p>An automated car service that links with public transport to get the customer to their destination quickly in suburban areas.
+              <div id="ghub-img" class="cell-img"></div>
+              <p class="cell-desc">An automated car service that links with public transport to get the customer to their destination quickly in suburban areas.
               </p>
             </div>
           </div>
         </div>
     </div>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <div id="group5" class="parallax__group">
-        <div class="parallax__layer parallax__layer--base">
-          <br>
-          <br>
-          <br>
-          <br>
-          <br>
-          <br>
-          <br>
-          <h1 class="hero-text h-top">Woolworths Service Desk UI</h1>
-          <div class="wrapper w-project">
-            <div class="cell">
-              <h1 class="cell-title t-4">The Problem</h1>
-              <img class="cell-icon" src="w1.jpeg" alt="Design Methods and Processes"></img>
-              <p>Communication issues combined with a frustrating and unintuitive customer experience 
-                when using the service desk at Woolworths.
-              </p>
-            </div>
-            <div class="cell"></div>
-            <div class="cell"></div>
-            <div class="cell"> 
-              <h1 class="cell-title t-5">The Method</h1>
-              <img class="cell-icon" src="w2.jpg" alt="Design Methods and Processes"></img>
-              <p> Through a combination of user research methods, the team and I discovered three key areas 
-                needing improvement; clarity of purpose, as well as reliability and functionality of process.
-              </p> 
-            </div>
-            <div class="cell"> 
-              <h1 class="cell-title t-6">The Solution</h1>
-              <img class="cell-icon" src="w3.jpg" alt="Design Methods and Processes"></img>
-              <p>A self-service UI at the Woolworths service desk that processed simple aspects of a request to and
-                allowed staff to focus on more complex, emotional aspects of the customer experience.
-              </p>
-            </div>
-            <div class="cell"></div>
-            <div class="cell"></div>
-            <div class="cell"> 
-                <h1 class="cell-title t-6">The Team</h1>
-                <ul>
-                  <li>Me - Lead, User Research</li>
-                  <li>Will Jarman - UI, Visual Communication</li>
-                  <li>Mikelis Knochs – UI, Visual Communication</li>
-                  <li>Lucas Rusiecki – 3D Modelling</li>
-                  <li>Declan Behan – UI, User Research</li>
-                </ul>
+    <div id="group7" class="parallax__group">
+        <div class="parallax__layer parallax__layer--fore">
+            <h1 id="bio" class="hero-text h-center">If you need a problem solved, drop me a line...</h1>
+            <div class="wrapper w-contact">
+              <div class="cell">
+                  <a href="mailto:sammchall@gmail.com">
+                      <div id="email-img" class="cell-img-contact"></div>
+                      <p>shoot me an email</p>
+                    </a>
               </div>
+              <div class="cell">
+                  <a href="Sam-Hall-CV.pdf">
+                    <div id="cv-img" class="cell-img-contact"></div>
+                    <p>my CV</p>
+                  </a>
+                </div>
+                <div class="cell">
+                    <a href="https://www.linkedin.com/in/itsjustsam/">
+                      <div id="link-img" class="cell-img-contact"></div>
+                      <p>my LinkedIn page</p>
+                    </a>
+                  </div>
+            </div>
           </div>
-        </div>
-    </div>
-    <div id="group6" class="parallax__group gap">
+        
         <div class="parallax__layer parallax__layer--base">
-          <br>
-          <br>
-          <br>
-          <br>
-          <br>
-          <br>
-          <br>
-          <h1 class="hero-text h-top">Nurse Connect</h1>
-          <div class="wrapper w-project"> 
-            <div class="cell">
-              <h1 class="cell-title t-4">The Problem</h1>
-              <img class="cell-icon" src="n1.jpeg" alt="Design Methods and Processes"></img>
-              <p>VAD (Ventricular Assist Device) nurses experience an immense amount of emotional fatigue 
-                due to the demands of their job. Over time, this affects their overall health and their 
-                effectiveness at providing optimal paitient care.
-              </p>
-            </div>
-            <div class="cell"></div>
-            <div class="cell"></div>
-            <div class="cell"> 
-              <h1 class="cell-title t-5">The Method</h1>
-              <img class="cell-icon" src="n2.jpg" alt="Design Methods and Processes"></img>
-              <p>The team and I were given access to detailed research which, upon analysis, provided key insights into the deeper issues concerning VAD nurse emotional faitgue.
-              </p> 
-            </div>
-            <div class="cell"> 
-              <h1 class="cell-title t-6">The Solution</h1>
-              <img class="cell-icon" src="n3.jpg" alt="Design Methods and Processes"></img>
-              <p>A digital interface that facilatates communication between VAD nurses and coordinators 
-                as well as the greater VAD community
-              </p>
-            </div>
-            <div class="cell"></div>
-            <div class="cell"></div>
-            <div class="cell"> 
-                <h1 class="cell-title t-6">The Team</h1>
-                <ul>
-                    <li>Me - Research, Video Production</li>
-                    <li>Will Jarman - UI, UX</li>
-                    <li>Mikelis Knochs – UI, Video Production</li>
-                  </ul>
-              </div>
-          </div>
-        </div>
-    </div>
-    <div id="group7" class="parallax__group gap">
-        <div class="parallax__layer parallax__layer--base">
-          <br>
-          <br>
-          <br>
-          <br>
-          <br>
-          <br>
-          <br>
-          <h1 id="gohub" class="hero-text h-top">Go-Hub</h1>
-          <div class="wrapper w-project"> 
-            <div class="cell">
-              <h1 class="cell-title t-4">The Problem</h1>
-              <img class="cell-icon" src="g1.jpg" alt="Design Methods and Processes"></img>
-              <p>Traffic Congestion during the work commute is frustrating and poorly affects someones day. 
-              </p>
-            </div>
-            <div class="cell"></div>
-            <div class="cell"></div>
-            <div class="cell"> 
-              <h1 class="cell-title t-5">The Method</h1>
-              <img class="cell-icon" src="g2.png" alt="Design Methods and Processes"></img>
-              <p>A combination of Report Research, Surveys and Contextual Interviews revealed the need
-                for a digital mobile solution that provides optimal travel routes while automating the planning of these routes
-              </p> 
-            </div>
-            <div class="cell"> 
-              <h1 class="cell-title t-6">The Solution</h1>
-              <img class="cell-icon" src="g3.jpg" alt="Design Methods and Processes"></img>
-              <p>A transport planning application that integrates with an autonomous vehicle network 
-                to improve connections between public transport hubs and the users home.</p>
-            </div>
-            <div class="cell"></div>
-            <div class="cell"></div>
-            <div class="cell"> 
-                <h1 class="cell-title t-6">The Team</h1>
-                <ul>
-                    <li>Me - UX, Animation</li>
-                    <li>Mikelis Knochs – UI, UX, Video Production</li>
-                  </ul>
-              </div>
-          </div>
+            <div id="contact-img" class="section-hero"></div>
         </div>
     </div>
   </div>

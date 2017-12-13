@@ -124,12 +124,11 @@
   .nav {
     position: sticky;
     width: 100%;
-    top: 0;
+    top: 15px;
     z-index: 999;
     /*background: rgba(0,0,0,.85); */
-    color: #fff;
-    background-color: #4e7474; 
-    padding: .5em;
+    color: #fff; 
+    padding: 0 .5em;
     border-radius: 0 0 5px 5px;
     z-index: 8;
   }
@@ -188,7 +187,7 @@
   body {
     font: 100% / 1.5 'Raleway', sans-serif;;
     color: #fff;
-    background-color: #4e7474;
+    background-color: #425868;
   }
 
   * {
@@ -218,10 +217,48 @@
     top: 85%;
   }
 
-  /* embedded in box class */
+  /* specific changes to boxes */
 
+  #bio {
+    margin-top: 65vh;
+  }
 
+  .section-hero { 
+    margin: 15vh auto 12vh;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    
 
+  }
+
+  #me-img {
+    background-image: url(me.png);
+    background-repeat: no-repeat;
+    background-size: 450px auto;
+    background-position: -70px 0px;
+  }
+
+  #work-img {
+    background-image: url(work-hero.png);
+    background-size: 300px 300px;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  #contact-img {
+    background-image: url(contact-hero.png);
+    background-size: 300px 300px;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  #skills-img {
+    background-image: url(skills-hero.png);
+    background-size: 300px 300px;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
   /* text styles 
   font-family: 'Vollkorn SC', serif;
 font-family: 'Raleway', sans-serif;
@@ -234,7 +271,7 @@ font-family: 'Raleway', sans-serif;
   }
 
   .h-center {
-    margin: 25vw auto;
+    margin: 25vw auto 0;
   }
 
   .h-top { 
@@ -258,9 +295,7 @@ font-family: 'Raleway', sans-serif;
     line-height: 1.5;
   }
 
-  #bio {
-    font-family: 'Vollkorn SC', serif;
-  }
+
 
 
   /* grid styles */ 
@@ -274,9 +309,12 @@ font-family: 'Raleway', sans-serif;
     margin: 0vw auto;
   }
 
+  .w-contact { 
+    margin-top: 5vh;
+  }
+
   .w-project { 
     grid-template-columns: 1fr 1fr;
-    grid-column-gap: 0px;
     background-color: #4e7474;
   }
   
@@ -285,58 +323,92 @@ font-family: 'Raleway', sans-serif;
     text-align: center;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-    padding: 20px;
+    padding: 0px;
     font-size: auto;
     color: white;
     line-height: 1;
     font-weight: 200;
-    cursor: pointer;
-    transition: all .3s ease;
   }
 
   .cell-icon {
+    position: relative;
     width: 100%;
     max-width: 350px;
     margin: 5vh;
+    z-index: 1;
 
   }
 
   .cell-title { 
     position: relative;
+    top: 0px;
+    min-height: 64px;
+    z-index: 0;  
     
   }
 
-  .t-1 {
-    top: 0px;
+  .cell-desc { 
+    min-height: 120px;
+    width: 25vw;
   }
-
-  .t-2 {
-    top: 0px;
-  }
-
-  .t-3 {
-    top: 2vh;
-  }
-
-  .t-4 {
-    top: 3vh;
-  }
-
-  .t-5 {
-    top: 0vh;
-  }
-
-  .t-6 {
-    top: -3vh;
-  }
-
   a {
     list-style-type: none;
     text-decoration: none;
     color: #fff;
   }
+
+  /* project and contact grid styles */
+
+  .cell-img {
+    width: 20vh;
+    height: 20vh;
+    margin: 5vh;
+  }
+
+  .cell-img-contact { 
+    width: 15vh;
+    height: 15vh; 
+    margin: 2vh;
+  }
+
+  /* project hero images */
+
+  #wool-img { background-image: url(1.jpg);
+              background-size: 24.5vh 20vh;
+              background-position: center;
+  }
+
+  #nurse-img { background-image: url(2.jpg);
+               background-size: 28.2vh 20vh;
+               background-position: center;
+}
+
+  #ghub-img { background-image: url(3.png);
+              background-size: 30.4vh 20vh;
+              background-position: center;
+}
+
+/* contact hero images */
+
+ #link-img {  background-image: url(linkedin.png);
+              background-size: 15vh 15vh;
+              background-position: center;
+
+ }
+
+ #cv-img {  background-image: url(cv_scroll.png);
+  background-size: 15vh 15vh;
+  background-position: center;
+
+}
+
+#email-img {  background-image: url(email.png);
+  background-size: 15vh 15vh;
+  background-position: center;
+
+}
+
 
   /* style the groups and containers
   --------------------------------------------- */
@@ -439,9 +511,10 @@ font-family: 'Raleway', sans-serif;
     z-index: 6; /* slide over groups 1 and group 3 */
   }
   #group2 .parallax__layer--fore { 
-    background: #4e7474;
+    background: none;
   }
-  #group2 .parallax__layer--base { 
+
+.parallax__layer--base { 
     background: #4e7474;
   }
 
@@ -450,27 +523,14 @@ font-family: 'Raleway', sans-serif;
 #group3 { 
     z-index: 7; /* slide over group 1 and group 4 */
 }
-
-#group3 .parallax__layer--base { 
-  background: #4e7474;
-}
-
 /* portfolio / some things ive worked on section */
 
 #group4 { 
   z-index: 6; /* slide under group 3 */
 }
 
-#group4 .parallax__layer--base { 
-background: #4e7474;
-}
-
 #group5 { 
   z-index: 5; /* slide under group 4 */
-}
-
-#group5 .parallax__layer--base { 
-background: #4e7474;
 }
 
   /* for da phone*/ 
